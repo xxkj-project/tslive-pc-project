@@ -1,0 +1,75 @@
+@import './reset.less';
+@import './vant-reset.less';
+@import './variable.less';
+@import './h5-compatibility';
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#nprogress {
+  .bar {
+    height: 1px !important;
+    background: @dydYellow !important;
+
+    .peg {
+      box-shadow: 0 0 10px @dydYellow, 0 0 5px @dydYellow;
+    }
+  }
+}
+
+// 单行溢出隐藏
+.one-txt-cut {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 两行溢出隐藏
+.two-txt-cut {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+// 隐藏滚动条
+::-webkit-scrollbar {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+#app {
+  font-family: 'MicrosoftYaHei', 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+  font-size: 14px;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+  &.mobile {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+// // 设置滚动条的宽度
+// ::-webkit-scrollbar {
+//   width: 6px;
+//   height: 6px;
+// }
+
+// // 自定义滚动条样式
+// ::-webkit-scrollbar-thumb {
+//   background-color: #c2c2c2;
+//   background-clip: padding-box;
+//   border: 1px solid #c2c2c2;
+//   min-height: 28px;
+// }
